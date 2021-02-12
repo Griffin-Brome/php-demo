@@ -3,10 +3,13 @@
   <nav>
     <ul>
       <li>
-        <a href="#">Home</a>
+        <a href="/index.php">Home</a>
       </li>
       <li>
-        <a href="#">Shop</a>
+        <a href="/shop.php">Shop</a>
+      </li>
+      <li>
+        <a href="/admin.php">Admin</a>
       </li>
     </ul>
   </nav>
