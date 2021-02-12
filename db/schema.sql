@@ -17,25 +17,8 @@ CREATE TABLE admin (
   PRIMARY KEY(uname)
 )
 
-CREATE TABLE user (
-  uname VARCHAR NOT NULL,
-  pword CHAR(32) NOT NULL, --MD5 password hash
-  PRIMARY KEY(uname)
-)
-
-CREATE TABLE cart (
-  id INT NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY(id)
-)
-
 CREATE TABLE item (
   name VARCHAR NOT NULL,
   cost INT,
   details VARCHAR
-)
-
-CREATE TABLE in_cart (
-  cart_id INT NOT NULL REFERENCES cart(id),
-  item_name VARCHAR NOT NULL REFERENCES item(name),
-  qty INT
 )
