@@ -9,11 +9,12 @@
 ```
 $ sudo /opt/lampp/lampp start
 ```
-3. Populate the database
+3. Create the database
 ```
 $ mysql -u root -p
 mysql> CREATE DATABASE php_demo
 ```
+4. Populate the database
 ```
 $ mysql -u root -p  --socket=/opt/lampp/var/mysql/mysql.sock php_demo < db/schema.sql
 ```
