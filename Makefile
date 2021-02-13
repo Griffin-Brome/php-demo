@@ -5,3 +5,6 @@
 
 all:
 	sudo cp -ruv * /opt/lampp/htdocs
+
+clean:
+	sudo rm -rvf /opt/lampp/htdocs/*
