@@ -7,15 +7,13 @@
 2. Start XAMPP server
 
 ```
-sudo /opt/lampp/lampp start
+$ sudo /opt/lampp/lampp start
 ```
 3. Populate the database
 ```
-mysql -u root -p
+$ mysql -u root -p
+mysql> CREATE DATABASE php_demo
 ```
 ```
-CREATE DATABASE php_demo
-```
-```
-mysql -u root -p  --socket=/opt/lampp/var/mysql/mysql.sock php_demo < db/schema.sql
+$ mysql -u root -p  --socket=/opt/lampp/var/mysql/mysql.sock php_demo < db/schema.sql
 ```
