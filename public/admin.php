@@ -12,12 +12,12 @@ Description: Administrator portal.
   </head>
 
   <body>
-    <?php include "header.php"?>
+    <?php include "../php/header.php"?>
 
     <h2>Administrator</h2>
 
     <h3>Add Item</h3>
-    <form action="./new_item.php" method="GET">
+    <form action="../php/new_item.php" method="GET">
       <fieldset>
         <legend>New Item</legend>
 
@@ -29,6 +29,8 @@ Description: Administrator portal.
 
         <label for="new-details">Item details:</label>
         <textarea id="new-details" name="new-details"></textarea>
+
+        <input type="submit" name="submit">
 
       </fieldset>
     </form>
