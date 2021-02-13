@@ -18,3 +18,5 @@ mysql> CREATE DATABASE php_demo
 ```
 $ mysql -u root -p  --socket=/opt/lampp/var/mysql/mysql.sock php_demo < db/schema.sql
 ```
+## Setup - Windows
+TODO
