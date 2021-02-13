@@ -9,5 +9,3 @@
 ```
 sudo /opt/lampp/lampp start
 ```
-
-3. Create a database user
