@@ -10,13 +10,13 @@ Description: Website header, should appear on all user faces pages.
   <nav>
     <ul>
       <li>
-        <a href="/index.php">Home</a>
+        <a href="../public/index.php">Home</a>
       </li>
       <li>
-        <a href="/shop.php">Shop</a>
+        <a href="../public/shop.php">Shop</a>
       </li>
       <li>
-        <a href="/admin.php">Admin</a>
+        <a href="../public/admin.php">Admin</a>
       </li>
     </ul>
   </nav>
