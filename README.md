@@ -1,6 +1,6 @@
 # php-demo
 
-## Setup
+## Setup - Linux
 
 1. Install [XAMPP](https://www.apachefriends.org/download.html)
 
