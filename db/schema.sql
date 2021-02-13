@@ -9,13 +9,12 @@ DROP TABLE IF EXISTS admin;
 DROP TABLE IF EXISTS item;
 
 CREATE TABLE admin (
-  uname VARCHAR NOT NULL,
-  pword CHAR(32) NOT NULL, --MD5 password hash
-  PRIMARY KEY(uname)
+  uname VARCHAR(255) NOT NULL PRIMARY KEY,
+  pword VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE item (
-  name VARCHAR NOT NULL,
+  name VARCHAR(255) NOT NULL PRIMARY KEY,
   cost INT,
-  details VARCHAR
+  details VARCHAR(255)
 );
