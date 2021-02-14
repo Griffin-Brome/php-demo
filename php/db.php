@@ -7,32 +7,19 @@
  */
 
 /**
- * @return a mysqli connection object to the local DB
+ * @return reference to a mysqli connection object to the local DB
  *
  * @param uname - mySQL user username
  * @param pword - mySQL user password
  * @param db - DB to connect to
  */
 function &getConnection($host = 'localhost', $uname = 'root', $pword = '', $db = 'php_demo') {
-  try {
     $con = new mysqli($host, $uname, $pword, $db);
-  } catch (exception $e) {
-    die($e->getMessage());
-  }
-    return $con;
-}
-
-/**
- * @return true or false, depending on closure success
- *
- * @param con - mysqli connection object
- */
-function closeConnection($con) {
-  try {
-    return $con->close();
-  } catch (exception $e) {
-    die($e->getMessage());
-  }
+    if ($con->connect_errno) {
+        die($con->connect_error);
+    } else {
+        return $con;
+    }
 }
 
 /**
