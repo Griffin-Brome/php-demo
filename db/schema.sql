@@ -15,6 +15,6 @@ CREATE TABLE admin (
 
 CREATE TABLE item (
   name VARCHAR(255) NOT NULL PRIMARY KEY,
-  cost INT,
+  cost DECIMAL,
   details VARCHAR(255)
 );
