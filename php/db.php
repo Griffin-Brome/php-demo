@@ -13,10 +13,10 @@
  * @param pword - mySQL user password
  * @param db - DB to connect to
  */
-private function &getConnection($uname = 'root', $pword = '', $db = 'php_demo') {
+function &getConnection($host = 'localhost', $uname = 'root', $pword = '', $db = 'php_demo') {
   try {
-    $con = new mysqli($uname, $pword, $db);
-  } catch (exception e) {
+    $con = new mysqli($host, $uname, $pword, $db);
+  } catch (exception $e) {
     die($e->getMessage());
   }
     return $con;
@@ -27,10 +27,10 @@ private function &getConnection($uname = 'root', $pword = '', $db = 'php_demo') 
  *
  * @param con - mysqli connection object
  */
-private function closeConnection($con) {
+function closeConnection($con) {
   try {
     return $con->close();
-  } catch (exception e) {
+  } catch (exception $e) {
     die($e->getMessage());
   }
 }
@@ -38,7 +38,7 @@ private function closeConnection($con) {
 /**
  * TODO
  */
-public function createItem($name, $cost, $details) {
+function createItem($name, $cost, $details) {
   $con = getConnection();
 
   try {
@@ -48,7 +48,7 @@ public function createItem($name, $cost, $details) {
     $stmt->execute();
 
     $stmt->close();
-  } catch (exception e) {
+  } catch (exception $e) {
     die($e->getMessage());
   }
   closeConnection($con);
@@ -57,15 +57,15 @@ public function createItem($name, $cost, $details) {
 /**
  * TODO
  */
-public function deleteItem() {}
+function deleteItem() {}
 
 /**
  * TODO
  */
-public function updateItem() {}
+function updateItem() {}
 
 /**
  * TODO
  */
-public function getItem() {}
+function getItem() {}
 ?>
