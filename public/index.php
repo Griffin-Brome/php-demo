@@ -10,7 +10,7 @@ Description: Main landing page for website
     <title>Main Page</title>
   </head>
   <body>
-    <?php include "header.php"?>
+    <?php include "../php/header.php"?>
     <h2>Home</h2>
   </body>
 </html> 
