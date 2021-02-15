@@ -23,28 +23,30 @@ function &getConnection($host = 'localhost', $uname = 'root', $pword = '', $db =
 }
 
 /**
- * TODO
+ * Creates a new item in the 'item' table
+ *
+ * @return null
+ *
+ * @param name - name of item
+ * @param cost - cost of item
+ * @param details - small description of item
  */
 function createItem($name, $cost, $details) {
-  $con = getConnection();
+    $con = getConnection();
 
-  try {
     $stmt = $con->prepare("INSERT INTO item(name, cost, details) values (?,?,?)");
     $stmt->bind_param('sds', $name, $cost, $details);
 
     $stmt->execute();
 
     $stmt->close();
-  } catch (exception $e) {
-    die($e->getMessage());
-  }
-  closeConnection($con);
+   
+    if ($stmt->errno) {
+        die($stmt->error);
+    }
+    
+    $con->close();
 }
-
-/**
- * TODO
- */
-function deleteItem() {}
 
 /**
  * TODO
@@ -55,4 +57,9 @@ function updateItem() {}
  * TODO
  */
 function getItem() {}
+
+/**
+ * TODO
+ */
+function getAllItems() {}
 ?>
