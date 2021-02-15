@@ -49,9 +49,28 @@ function createItem($name, $cost, $details) {
 }
 
 /**
- * TODO
+ * Deletes an item from the 'item' table
+ *
+ * @return null
+ *
+ * @param name - name of item to delete
  */
-function updateItem() {}
+function deleteItem($name) {
+    $con = getConnection();
+
+    $stmt = $con->prepare("DELETE FROM item WHERE name = ?");
+    $stmt->bind_param('s', $name);
+
+    $stmt->execute();
+
+    $stmt->close();
+   
+    if ($stmt->errno) {
+        die($stmt->error);
+    }
+    
+    $con->close();
+}
 
 /**
  * TODO
@@ -59,7 +78,17 @@ function updateItem() {}
 function getItem() {}
 
 /**
- * TODO
+ * @return reference to an array (numeric/associative) of all rows from the item table
  */
-function getAllItems() {}
+function &getAllItems() {
+    $con = getConnection();
+    $rst = $con->query("SELECT * FROM item");
+    $rows = $rst->fetch_all();
+
+    if ($con->errno) {
+        die($con->error);
+    }
+    
+    return $rows;
+}
 ?>
