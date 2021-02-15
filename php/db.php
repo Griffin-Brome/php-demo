@@ -78,7 +78,17 @@ function deleteItem($name) {
 function getItem() {}
 
 /**
- * TODO
+ * @return an array (numeric/associative) of all rows from the item table
  */
-function getAllItems() {}
+function getAllItems() {
+    $con = getConnection();
+    $rst = $con->query("SELECT (name, cost, details) FROM item");
+    $rows = $rst->fetch_all();
+
+    if ($con->errno) {
+        die($con->error);
+    }
+    
+    return $rows;
+}
 ?>
