@@ -37,17 +37,15 @@ Description: Administrator portal.
       </fieldset>
     </form>
 
-    <h3>Edit Item</h3>
-    <form action="TODO" method="GET">
-      <fieldset>
-        <legend>Item to be Edited</legend>
-      </fieldset>
-    </form>
-
     <h3>Delete Item</h3>
-    <form action="TODO" method="GET">
+    <form action="../php/delete_item.php" method="POST">
       <fieldset>
         <legend>Item to be Deleted</legend>
+        
+        <label for="items">Select an item to delete:</label>
+        <select name="items" id="items">
+            <?php ?>
+        </select>
       </fieldset>
     </form>
 

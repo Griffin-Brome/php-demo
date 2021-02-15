@@ -49,9 +49,28 @@ function createItem($name, $cost, $details) {
 }
 
 /**
- * TODO
+ * Deletes an item from the 'item' table
+ *
+ * @return null
+ *
+ * @param name - name of item to delete
  */
-function updateItem() {}
+function deleteItem($name) {
+    $con = getConnection();
+
+    $stmt = $con->prepare("DELETE FROM item WHERE name = ?");
+    $stmt->bind_param('s', $name);
+
+    $stmt->execute();
+
+    $stmt->close();
+   
+    if ($stmt->errno) {
+        die($stmt->error);
+    }
+    
+    $con->close();
+}
 
 /**
  * TODO
