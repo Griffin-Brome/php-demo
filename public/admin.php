@@ -7,7 +7,8 @@ Description: Administrator portal.
 
 <!DOCTYPE html>
 <?php 
-    include "../php/header.php"
+    include "../php/header.php";
+    include "../php/db.php";
 ?>
 
 <html>
@@ -42,10 +43,15 @@ Description: Administrator portal.
       <fieldset>
         <legend>Item to be Deleted</legend>
         
-        <label for="items">Select an item to delete:</label>
-        <select name="items" id="items">
-            <?php ?>
+        <label for="delete_name">Select an item to delete:</label>
+        <select name="delete_name" id="delete_name">
+            <?php 
+                $rows = getAllItems();
+                foreach($rows as $row)
+                    echo "<option value='$row[0]'>$row[0]</option>\n";
+            ?>
         </select>
+        <input type="submit" name="submit">
       </fieldset>
     </form>
 
