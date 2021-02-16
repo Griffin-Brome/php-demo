@@ -42,12 +42,13 @@ include "../php/db.php";
     </form>
 
     <h3>Delete Item</h3>
-    <form action="../php/delete_item.php" method="POST">
+    <form id="delete_item" action="../php/delete_item.php" method="POST">
       <fieldset>
         <legend>Item to be Deleted</legend>
 
         <label for="delete_name">Select an item to delete:</label>
         <select name="delete_name" id="delete_name">
+<!-- TODO replace me with AJAX -->
 <?php 
 $rows = getAllItems();
 foreach($rows as $row)
