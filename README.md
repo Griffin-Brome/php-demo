@@ -34,11 +34,11 @@ _note:_ You will be prompted for sudo
 ```
 3. Create the database
 ```
-mysql.exe –u root –p
+\xampp\mysql\bin\mysql.exe –u root –p
 mysql> CREATE DATABASE php_demo
 ```
 4. Populate the database
 ```
-mysql.exe -u root -p php_demo < db\schema.sql
+\xampp\mysql\bin\mysql.exe –u root –p php_demo < db\schema.sql
 ```
 5. Move the project files to your htdocs/ folder in your XAMPP installation
