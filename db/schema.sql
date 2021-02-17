@@ -1,8 +1,8 @@
 /*
- * Title:
- * Author:
- * License:
- * Description:
+ * Title: schema.sql
+ * Author: Griffin Brome
+ * License: MIT
+ * Description: SQL script to setup database
  */
 
 DROP TABLE IF EXISTS item;
