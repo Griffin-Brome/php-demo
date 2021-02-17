@@ -1,5 +1,7 @@
 # php-demo
 
+![screenshot of shop page](screenshot.png)
+
 ## Setup - Linux
 
 1. Install [XAMPP](https://www.apachefriends.org/index.html)
