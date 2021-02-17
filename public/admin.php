@@ -1,15 +1,12 @@
 <!--
-Name: admin.php
-Author: Griffin Brome
-License: MIT
-Description: Administrator portal.
+  Name: admin.php
+  Author: Griffin Brome
+  License: MIT
+  Description: Administrator portal.
 -->
 
 <!DOCTYPE html>
-<?php 
-include "../php/header.php";
-include "../php/db.php";
-?>
+<?php include "../php/db.php"; ?>
 
 <html>
   <head>
@@ -19,43 +16,46 @@ include "../php/db.php";
   </head>
 
   <body>
-    <h2>Administrator</h2>
-    <h3>Add Item</h3>
-    <form id="new_item" action="../php/new_item.php" method="POST">
-      <fieldset>
-        <legend>New Item</legend>
+    <?php include "../php/header.php"; ?>
+    <main class="container-lg">
+      <h1 class="text-center">Administrator</h2>
+      <form id="new_item" action="../php/new_item.php" method="POST">
+        <fieldset class="mb-3">
+          <legend>New Item</legend>
 
-        <label for="new_name">Item name:</label>
-        <input type="text" id="new_name" name="new_name" required>
+          <div class="row">
+            <div class="col-lg-10">
+              <label for="new_name" class="form-label">Item name:</label>
+              <input type="text" id="new_name" name="new_name" class="form-control" required>
+            </div>
 
-        <label for="new_cost">Item cost:</label>
-        <input type="number" id="new_cost" name="new_cost" min="0" step="0.01" required>
+            <div class="col-lg-2">
+              <label for="new_cost" class="form-label">Item cost:</label>
+              <input type="number" id="new_cost" name="new_cost" min="0" class="form-control" required>
+            </div>
+          </div>
 
-        <label for="new_details">Item details:</label>
-        <textarea id="new_details" name="new_details" required></textarea>
+          <div class="row">
+            <div class="col-lg-12">
+              <label for="new_details" class="form-label">Item details:</label>
+              <textarea id="new_details" name="new_details" class="form-control" required></textarea>
+            </div>
+          </div>
+        </fieldset>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      </form>
 
-        <input type="submit" name="submit">
+      <form id="delete_item" action="../php/delete_item.php" method="POST">
+        <fieldset class="mb-3">
+          <legend>Delete Item</legend>
 
-      </fieldset>
-    </form>
+          <label for="delete_name" class="form-label">Select an item to delete:</label>
+          <select name="delete_name" id="delete_name" class="form-select">
+          </select>
+        </fieldset>
+        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+      </form>
 
-    <h3>Delete Item</h3>
-    <form id="delete_item" action="../php/delete_item.php" method="POST">
-      <fieldset>
-        <legend>Item to be Deleted</legend>
-
-        <label for="delete_name">Select an item to delete:</label>
-        <select name="delete_name" id="delete_name">
-<!-- TODO replace me with AJAX -->
-<?php 
-$rows = getAllItems();
-foreach($rows as $row)
-    echo "<option value='$row[0]'>$row[0]</option>\n";
-?>
-        </select>
-        <input type="submit" name="submit">
-      </fieldset>
-    </form>
-
+    </main>
   </body>
 </html>

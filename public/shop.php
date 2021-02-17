@@ -1,9 +1,9 @@
 <!--
-Name: shop.php
-Author: Griffin Brome
-License: MIT
-Description: Shop page, shows site inventory
- -->
+  Name: shop.php
+  Author: Griffin Brome
+  License: MIT
+  Description: Shop page, shows site inventory
+-->
 
 <!DOCTYPE html>
 <html>
@@ -14,13 +14,15 @@ Description: Shop page, shows site inventory
   </head>
   <body>
     <?php include "../php/header.php" ?>
-    <h2>Shop</h2>
-    <table id="all_items" class="table">
+    <main class="container-lg">
+      <h2 class="text-center">Shop</h2>
+      <table id="all_items" class="table table-striped">
         <tr>
-            <th>Name</th>
-            <th>Cost</th>
-            <th>Details</th>
+          <th>Name</th>
+          <th>Cost</th>
+          <th>Details</th>
         </tr>
-    </table>
+      </table>
+    </main>
   </body>
 </html>

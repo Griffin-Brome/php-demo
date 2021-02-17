@@ -1,9 +1,9 @@
 <!--
-Name: index.php
-Author: Griffin Brome
-License: MIT
-Description: Main landing page for website
- -->
+  Name: index.php
+  Author: Griffin Brome
+  License: MIT
+  Description: Main landing page for website
+-->
 <!DOCTYPE html>
 <html>
   <head>
@@ -12,6 +12,10 @@ Description: Main landing page for website
   </head>
   <body>
     <?php include "../php/header.php"?>
-    <h2>Home</h2>
+    <main class="container-lg text-center">
+      <h1 class="text-center">The Robot Store</h1>
+      <p>A Project by <a href="https://github.com/Griffin-Brome">Griffin Brome</a><p>
+          <p><a href="./shop.php">Browse</a></p>
+    </main>
   </body>
 </html> 

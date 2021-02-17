@@ -8,7 +8,7 @@ Description: Website header, should appear on all user faces pages.
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
-      <h1 class="navbar-brand">PHP Demo Website</h1>
+      <h1 class="navbar-brand">The Robot Store</h1>
         <ul class="navbar-nav">
           <li class="nav-item">
             <a href="../public/index.php" class="nav-link">Home</a>
