@@ -1,3 +1,10 @@
+/*
+ * Name: admin.js
+ * Author: Griffin Brome
+ * License: MIT
+ * Descripton: AJAX handlers that enable admin page forms to mutate the database
+ */
+
 $(document).ready(function() {
   /*
    * Create item via AJAX request
