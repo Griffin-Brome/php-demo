@@ -24,6 +24,8 @@ make
 ```
 _note:_ You will be prompted for sudo
 
+6. Navigate to [localhost/public](http://localhost/public)
+
 ## Setup - Windows
 
 1. Install [XAMPP](https://www.apachefriends.org/index.html)
@@ -42,3 +44,5 @@ mysql> CREATE DATABASE php_demo
 \xampp\mysql\bin\mysql.exe –u root –p php_demo < db\schema.sql
 ```
 5. Move the project files to your htdocs/ folder in your XAMPP installation
+
+6. Navigate to [localhost/public](http://localhost/public)
