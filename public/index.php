@@ -7,6 +7,7 @@ Description: Main landing page for website
 <!DOCTYPE html>
 <html>
   <head>
+    <?php include "../php/head.php"; ?>
     <title>Main Page</title>
   </head>
   <body>

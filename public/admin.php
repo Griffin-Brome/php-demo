@@ -13,14 +13,12 @@ include "../php/db.php";
 
 <html>
   <head>
-    <!-- Load jQuery from CDN -->
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <?php include "../php/head.php"; ?>
     <script src="../static/js/admin.js"></script>
     <title>Admin Portal</title>
   </head>
 
   <body>
-
     <h2>Administrator</h2>
     <h3>Add Item</h3>
     <form id="new_item" action="../php/new_item.php" method="POST">
