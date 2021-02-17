@@ -6,20 +6,20 @@
 -->
 
 <!DOCTYPE html>
-<?php include "../php/db.php"; ?>
+<?php include "php/db.php"; ?>
 
 <html>
   <head>
-    <?php include "../php/head.php"; ?>
-    <script src="../static/js/admin.js"></script>
+    <?php include "php/head.php"; ?>
+    <script src="static/js/admin.js"></script>
     <title>Admin Portal</title>
   </head>
 
   <body>
-    <?php include "../php/header.php"; ?>
+    <?php include "php/header.php"; ?>
     <main class="container-lg">
       <h1 class="text-center">Administrator</h2>
-      <form id="new_item" action="../php/new_item.php" method="POST">
+      <form id="new_item" action="php/new_item.php" method="POST">
         <fieldset class="mb-3">
           <legend>New Item</legend>
 
@@ -45,7 +45,7 @@
         <button type="submit" name="submit" class="btn btn-primary">Submit</button>
       </form>
 
-      <form id="delete_item" action="../php/delete_item.php" method="POST">
+      <form id="delete_item" action="php/delete_item.php" method="POST">
         <fieldset class="mb-3">
           <legend>Delete Item</legend>
 
