@@ -14,6 +14,6 @@ if (!$_POST) {
 } else {
     $name = $_POST["delete_name"];
     deleteItem($name);
-    header("Location: ../public/admin.php"); // Redirect back to admin page
+    header("Location: ../admin.php"); // Redirect back to admin page
 }
 ?>

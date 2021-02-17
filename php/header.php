@@ -11,13 +11,13 @@ Description: Website header, should appear on all user faces pages.
       <h1 class="navbar-brand">The Robot Store</h1>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="../public/index.php" class="nav-link">Home</a>
+            <a href="index.php" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="../public/shop.php" class="nav-link">Shop</a>
+            <a href="shop.php" class="nav-link">Shop</a>
           </li>
           <li class="nav-item">
-            <a href="../public/admin.php" class="nav-link">Admin</a>
+            <a href="admin.php" class="nav-link">Admin</a>
           </li>
         </ul>
     </div>

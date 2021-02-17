@@ -16,6 +16,6 @@ if (!$_POST) {
     $cost = $_POST["new_cost"];
     $details = $_POST["new_details"];
     createItem($name, $cost, $details);
-    header("Location: ../public/admin.php"); // Redirect back to admin page
+    header("Location: ../admin.php"); // Redirect back to admin page
 }
 ?>
