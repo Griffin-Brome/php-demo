@@ -32,6 +32,19 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
+  /*
+   * Populate dropdown via AJAX
+   */
+  $.get("../../php/get_all_items.php")
+    .done(function( data){
+      var json = JSON.parse(data);
+      for (var item in json) {
+        $("#delete_name")
+          .append("<option value='" + json[item].name + "'>" 
+            + json[item].name 
+            + "</option");
+      }
+    });
+
 
 });
-}
