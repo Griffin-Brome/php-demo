@@ -7,13 +7,20 @@
  */
 
 /**
+ * Opens a connection to the MYSQL database
+ *
  * @return reference to a mysqli connection object to the local DB
  *
  * @param uname - mySQL user username
  * @param pword - mySQL user password
  * @param db - DB to connect to
  */
-function &getConnection($host = 'localhost', $uname = 'root', $pword = '', $db = 'php_demo') {
+function &getConnection(
+    $host = "localhost",
+    $uname = "root",
+    $pword = "",
+    $db = "php_demo"
+) {
     $con = new mysqli($host, $uname, $pword, $db);
     if ($con->connect_errno) {
         die($con->connect_error);
@@ -34,17 +41,19 @@ function &getConnection($host = 'localhost', $uname = 'root', $pword = '', $db =
 function createItem($name, $cost, $details) {
     $con = getConnection();
 
-    $stmt = $con->prepare("INSERT INTO item(name, cost, details) values (?,?,?)");
-    $stmt->bind_param('sds', $name, $cost, $details);
+    $stmt = $con->prepare(
+        "INSERT INTO item(name, cost, details) values (?,?,?)"
+    );
+    $stmt->bind_param("sds", $name, $cost, $details);
 
     $stmt->execute();
 
     $stmt->close();
-   
+
     if ($stmt->errno) {
         die($stmt->error);
     }
-    
+
     $con->close();
 }
 
@@ -59,25 +68,22 @@ function deleteItem($name) {
     $con = getConnection();
 
     $stmt = $con->prepare("DELETE FROM item WHERE name = ?");
-    $stmt->bind_param('s', $name);
+    $stmt->bind_param("s", $name);
 
     $stmt->execute();
 
     $stmt->close();
-   
+
     if ($stmt->errno) {
         die($stmt->error);
     }
-    
+
     $con->close();
 }
 
 /**
- * TODO
- */
-function getItem() {}
-
-/**
+ * Retrieves all rows from the 'item' table
+ *
  * @return reference to an array (numeric/associative) of all rows from the item table
  */
 function &getAllItems() {
@@ -88,7 +94,7 @@ function &getAllItems() {
     if ($con->errno) {
         die($con->error);
     }
-    
+
     return $rows;
 }
 ?>
