@@ -15,7 +15,7 @@ Description: Shop page, shows site inventory
   <body>
     <?php include "../php/header.php" ?>
     <h2>Shop</h2>
-    <table id="all_items">
+    <table id="all_items" class="table">
         <tr>
             <th>Name</th>
             <th>Cost</th>

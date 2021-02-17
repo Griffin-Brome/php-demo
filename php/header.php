@@ -6,18 +6,20 @@ Description: Website header, should appear on all user faces pages.
  -->
 
 <header>
-  <h1>PHP Demo Website</h1>
-  <nav>
-    <ul>
-      <li>
-        <a href="../public/index.php">Home</a>
-      </li>
-      <li>
-        <a href="../public/shop.php">Shop</a>
-      </li>
-      <li>
-        <a href="../public/admin.php">Admin</a>
-      </li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <h1 class="navbar-brand">PHP Demo Website</h1>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="../public/index.php" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="../public/shop.php" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a href="../public/admin.php" class="nav-link">Admin</a>
+          </li>
+        </ul>
+    </div>
   </nav>
 </header>
