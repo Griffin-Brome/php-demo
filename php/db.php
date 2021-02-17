@@ -83,7 +83,7 @@ function getItem() {}
 function &getAllItems() {
     $con = getConnection();
     $rst = $con->query("SELECT * FROM item");
-    $rows = $rst->fetch_all();
+    $rows = $rst->fetch_all(MYSQLI_ASSOC);
 
     if ($con->errno) {
         die($con->error);

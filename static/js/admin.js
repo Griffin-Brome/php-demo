@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  /**
+  /*
    * Create item via AJAX request
    */
   $("#new_item").submit(function(event) {
@@ -17,7 +17,7 @@ $(document).ready(function() {
     event.preventDefault();
   });
 
-  /**
+  /*
    * Delete item via AJAX request
    */
   $("#delete_item").submit(function(event) {
@@ -31,4 +31,7 @@ $(document).ready(function() {
       });
     event.preventDefault();
   });
+
+
 });
+}
